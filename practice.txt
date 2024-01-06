@@ -1,0 +1,128 @@
+
+mkdir@Raaazamit1701 ➜ /workspaces/geekster (main) $ mkdir content
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ cd content/
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ mkdir file file2 file3
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd file
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ touch file1.txt
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ nano file1.txt
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ mkdir content2 content3
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ cd content
+content/  content2/ content3/ 
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ cd content2/
+@Raaazamit1701 ➜ /workspaces/geekster/content2 (main) $ touch one.txt
+@Raaazamit1701 ➜ /workspaces/geekster/content2 (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ cd content
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd file2/
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ cat file2
+cat: file2: No such file or directory
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ cat file2.txt
+cat: file2.txt: No such file or directory
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd file
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ cat file1.txt
+Hey how are you
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd file2/
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ rm
+rm: missing operand
+Try 'rm --help' for more information.
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ rmdir file2/
+rmdir: failed to remove 'file2/': No such file or directory
+@Raaazamit1701 ➜ /workspaces/geekster/content/file2 (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ rmdir file2/
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ mv content/file/file1.txt content3
+mv: cannot stat 'content/file/file1.txt': No such file or directory
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd file
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ mv file/file1.txt content3
+mv: cannot stat 'file/file1.txt': No such file or directory
+@Raaazamit1701 ➜ /workspaces/geekster/content/file (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster/content (main) $ cd ..
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ mv content/file/file1.txt content3
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        content2/
+        content3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git config -- user.name "amit raj"
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git config -- user.email "amitraaaz0@gmail.com"
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git init
+Reinitialized existing Git repository in /workspaces/geekster/.git/
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git add .
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ ls
+README.md  content  content2  content3
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   content2/one.txt
+        new file:   content3/file1.txt
+
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git log
+commit 6c776de6f4ea94951f6bcb7a5eaadf9926e74188 (HEAD -> main, origin/main, origin/HEAD)
+Author: amit raj <150114504+Raaazamit1701@users.noreply.github.com>
+Date:   Wed Dec 20 12:51:32 2023 +0530
+
+    Initial commit
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   content2/one.txt
+        new file:   content3/file1.txt
+
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ rmdir content2
+rmdir: failed to remove 'content2': Directory not empty
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ rmdir content2/
+rmdir: failed to remove 'content2/': Directory not empty
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ rm -r content2/
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   content2/one.txt
+        new file:   content3/file1.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    content2/one.txt
+
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git log
+commit 6c776de6f4ea94951f6bcb7a5eaadf9926e74188 (HEAD -> main, origin/main, origin/HEAD)
+Author: amit raj <150114504+Raaazamit1701@users.noreply.github.com>
+Date:   Wed Dec 20 12:51:32 2023 +0530
+
+    Initial commit
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git commit -m "adding and deleting"
+[main 35fad26] adding and deleting
+ 2 files changed, 1 insertion(+)
+ create mode 100644 content2/one.txt
+ create mode 100644 content3/file1.txt
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git remote -v
+origin  https://github.com/Raaazamit1701/geekster (fetch)
+origin  https://github.com/Raaazamit1701/geekster (push)
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git remote add orgin "https://github.com/Raaazamit1701/geekster.git"
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 424 bytes | 424.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Raaazamit1701/geekster
+   6c776de..35fad26  main -> main
+branch 'main' set up to track 'origin/main'.
+@Raaazamit1701 ➜ /workspaces/geekster (main) $ 
